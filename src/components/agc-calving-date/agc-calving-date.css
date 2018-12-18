@@ -1,0 +1,90 @@
+agc-calving-date  * {
+    box-sizing: border-box;      
+}
+
+agc-calving-date form {
+    width: var(--agc-form-width, 100%);
+    margin: var(--agc-form-margin, 0 auto);
+    border: var(--agc-form-border-size, 1px) var(--agc-form-border-style, solid) var(--agc-form-border-color, #ebebeb);
+    border-radius: var(--agc-form-border-radius, 0);
+    padding: var(--agc-form-padding, 0);
+    background-color: var(--agc-form-bg-color, #ffffff);
+    color: var(--agc-form-color, #333);
+}
+agc-calving-date form.shadow {
+    -webkit-box-shadow: var(--agc-form-box-shadow,  0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23));  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: var(--agc-form-box-shadow,  0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23));  /* Firefox 3.5 - 3.6 */
+    box-shadow: var(--agc-form-box-shadow,  0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23));  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+agc-calving-date [data-wizard-section],
+agc-calving-date [data-wizard-results] {
+    display: none;
+}
+agc-calving-date .agc-wizard__field {
+    padding: var(--agc-wizard-field-padding, 10px);
+}
+agc-calving-date label {
+    text-transform: var(--agc-form-label-text-transform, none);
+    display: var(--agc-form-label-display, block);
+    width: var(--agc-form-label-width, 100%);
+    margin: var(--agc-form-label-margin, 0 0 5px 0);
+}
+agc-calving-date input[type="text"],
+agc-calving-date input[type="date"],
+agc-calving-date select {
+    padding: var(--agc-form-input-padding, 10px);
+    width: var(--agc-form-input-width, 100%);
+    font-size: var(--agc-form-input-font-size, 17px);
+    font-family: var(--agc-form-input-font-family, Raleway);
+    border: var(--agc-form-input-border-size, 1px) var(--agc-form-input-border-style, solid) var(--agc-form-input-border-color, #aaaaaa);
+}
+
+agc-calving-date button {
+    background-color: var(--agc-form-button-bg-color, transparent);
+    color: var(--agc-form-button-color, #ffffff);
+    border: var(--agc-form-button-border, none);
+    padding: var(--agc-form-button-padding, 10px 20px);
+    margin: var(--agc-form-button-margin, 0);
+    font-size: var(--agc-form-button-font-size, 17px);
+    font-family: var(--agc-form-button-font-family, Raleway);
+    cursor: var(--agc-form-button-cursor, pointer);
+    text-transform: var(--agc-form-button-text-transform, uppercase);
+}
+agc-calving-date .agc-wizard__actions {
+    background-color: var(--agc-wizard-actions-bg-color, #4CAF50);
+    border-radius: var(--agc-wizard-actions-border-radius, 0);
+    margin: var(--agc-wizard-actions-margin, 10px 0 0);
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+agc-calving-date .agc-wizard__actions:before,
+agc-calving-date .agc-wizard__actions:after {
+  content: "";
+  display: table;
+} 
+agc-calving-date .agc-wizard__actions::after {
+  clear: both;
+}
+agc-calving-date .agc-wizard__actions:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+agc-calving-date .agc-wizard__actions.centered {
+    text-align: var(--agc-form-actions-centered-text-align, center);
+}
+agc-calving-date button.agc-wizard__actions-next {
+    float: right;
+}
+
+agc-calving-date button.agc-wizard__actions-back {
+    background-color: var(--agc-form-back-button-bg-color, transparent);
+    color: var(--agc-form-back-button-color, #ffffff);
+}
+agc-calving-date button:hover {
+    opacity: 0.8;
+}
+agc-calving-date [data-wizard-results] {    
+    text-align: var(--agc-form-results-text-align, left);
+    padding: var(--agc-form-results-padding, 10px);
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Stencil Component Starter</title>
+  <script src="/build/agc-calving-date.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <style>
+    :root {
+      --agc-form-border-color: transparent;
+      --agc-wizard-actions-bg-color: purple;
+      --agc-step-progress-finish-bg-color: purple;
+    }
+    agc-calving-date h1 {
+      margin: 0;
+      padding: 5px 0 8px 0;
+      background-color: purple;
+      color: white;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>    
+  <agc-calving-date socket="example">
+    <h1>Calving Date Calculator</h1>
+    <div slot="results">
+        👀 Sponsored by ag-calculators.com
+    </div>
+  </agc-calving-date>
+  <agc-calving-date-progress socket="example"></agc-calving-date-progress>
+</body>
+</html>

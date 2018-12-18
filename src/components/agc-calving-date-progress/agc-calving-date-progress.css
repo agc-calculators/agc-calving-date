@@ -1,0 +1,29 @@
+agc-calving-date-progress * {
+    box-sizing: border-box;
+}
+
+agc-calving-date-progress .wizard__progress {
+    text-align: var(--agc-step-progress-text-align, center);
+    margin: var(--agc-step-progress-margin, 40px 0 0);
+}
+
+agc-calving-date-progress .wizard__progress.complete {
+    display: var(--agc-step-progress-complete-display, block);
+}
+
+agc-calving-date-progress .step {
+    height: var(--agc-step-progress-height, 15px);
+    width: var(--agc-step-progress-width, 15px);
+    margin: var(--agc-step-progress-margin, 0 2px);
+    background-color: var(--agc-step-progress-bg-color, #bbbbbb);
+    border: var(--agc-step-progress-border, none);  
+    border-radius: var(--agc-step-progress-border-radius,  50%);
+    display: var(--agc-step-progress-display, inline-block);
+    opacity: var(--agc-step-progress-opacity, 0.5);
+}
+agc-calving-date-progress .step.active {
+    opacity: 1;
+}
+agc-calving-date-progress .step.finish {
+    background-color: var(--agc-step-progress-finish-bg-color, #4caf50);
+}
