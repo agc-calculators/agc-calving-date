@@ -5,7 +5,7 @@ agc-calving-date  * {
 agc-calving-date form {
     width: var(--agc-form-width, 100%);
     margin: var(--agc-form-margin, 0 auto);
-    border: var(--agc-form-border-size, 1px) var(--agc-form-border-style, solid) var(--agc-form-border-color, #ebebeb);
+    border: var(--agc-form-border-size, 0px) var(--agc-form-border-style, solid) var(--agc-form-border-color, #ebebeb);
     border-radius: var(--agc-form-border-radius, 0);
     padding: var(--agc-form-padding, 0);
     background-color: var(--agc-form-bg-color, #ffffff);
@@ -16,8 +16,8 @@ agc-calving-date form.shadow {
     -moz-box-shadow: var(--agc-form-box-shadow,  0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23));  /* Firefox 3.5 - 3.6 */
     box-shadow: var(--agc-form-box-shadow,  0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23));  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
-agc-calving-date [data-wizard-section],
-agc-calving-date [data-wizard-results] {
+agc-calving-date [data-wizard-mode="step"] [data-wizard-section],
+agc-calving-date [data-wizard-mode="step"] [data-wizard-results] {
     display: none;
 }
 agc-calving-date .agc-wizard__field {
@@ -40,7 +40,7 @@ agc-calving-date select {
 }
 
 agc-calving-date button {
-    background-color: var(--agc-form-button-bg-color, transparent);
+    background-color: var(--agc-form-button-bg-color, #4CAF50);
     color: var(--agc-form-button-color, #ffffff);
     border: var(--agc-form-button-border, none);
     padding: var(--agc-form-button-padding, 10px 20px);
@@ -48,12 +48,13 @@ agc-calving-date button {
     font-size: var(--agc-form-button-font-size, 17px);
     font-family: var(--agc-form-button-font-family, Raleway);
     cursor: var(--agc-form-button-cursor, pointer);
-    text-transform: var(--agc-form-button-text-transform, uppercase);
+    text-transform: var(--agc-form-button-text-transform, inherit);
 }
 agc-calving-date .agc-wizard__actions {
-    background-color: var(--agc-wizard-actions-bg-color, #4CAF50);
+    background-color: var(--agc-wizard-actions-bg-color, transparent);
     border-radius: var(--agc-wizard-actions-border-radius, 0);
     margin: var(--agc-wizard-actions-margin, 10px 0 0);
+    padding: var(--agc-wizard-actions-padding, 0 10px 10px);
     zoom: 1; /* For IE 6/7 (trigger hasLayout) */
 }
 agc-calving-date .agc-wizard__actions:before,
@@ -78,13 +79,18 @@ agc-calving-date button.agc-wizard__actions-next {
 }
 
 agc-calving-date button.agc-wizard__actions-back {
-    background-color: var(--agc-form-back-button-bg-color, transparent);
+    background-color: var(--agc-form-back-button-bg-color, #999999);
     color: var(--agc-form-back-button-color, #ffffff);
 }
 agc-calving-date button:hover {
     opacity: 0.8;
 }
-agc-calving-date [data-wizard-results] {    
-    text-align: var(--agc-form-results-text-align, left);
-    padding: var(--agc-form-results-padding, 10px);
+agc-calving-date .agc-wizard__validation-message {
+    display: none;
+    color: var(--agc-form-validation-message-color, #800000);
+}
+agc-calving-date input.invalid {
+    border-color: var(--agc-form-input-error-border-color, #800000);
+    background-color: var(--agc-form-input-error-background-color, #FFE5E5);
+    color: var(--agc-form-input-error-color, #800000);
 }

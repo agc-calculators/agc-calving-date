@@ -1,5 +1,5 @@
 agc-calving-date-action button[class^="agc-wizard__actions-"] {
-    background-color: var(--agc-action-button-bg-color, transparent);
+    background-color: var(--agc-action-button-bg-color, #4CAF50);
     color: var(--agc-action-button-color, #ffffff);
     border: var(--agc-action-button-border, none);
     padding: var(--agc-action-button-padding, 10px 20px);
@@ -7,5 +7,5 @@ agc-calving-date-action button[class^="agc-wizard__actions-"] {
     font-size: var(--agc-action-button-font-size, 17px);
     font-family: var(--agc-action-button-font-family, Raleway);
     cursor: var(--agc-action-button-cursor, pointer);
-    text-transform: var(--agc-action-button-text-transform, uppercase);
+    text-transform: var(--agc-action-button-text-transform, inherit);
 }

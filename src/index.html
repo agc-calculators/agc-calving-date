@@ -8,26 +8,23 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <style>
     :root {
-      --agc-form-border-color: transparent;
-      --agc-wizard-actions-bg-color: purple;
-      --agc-step-progress-finish-bg-color: purple;
-    }
-    agc-calving-date h1 {
-      margin: 0;
-      padding: 5px 0 8px 0;
-      background-color: purple;
-      color: white;
-      text-align: center;
+      --agc-form-width: 80%;
+      --agc-form-margin: 20px auto 0 auto;
+      --agc-form-padding: 3px;
+      --agc-step-progress-complete-display: block;
     }
   </style>
 </head>
 <body>    
-  <agc-calving-date socket="example">
-    <h1>Calving Date Calculator</h1>
+  <h2 style="text-align: center">Calving Date Calculator</h2>
+  <agc-calving-date-progress socket="example"></agc-calving-date-progress>
+  <agc-calving-date socket="example" mode="step">
     <div slot="results">
-        👀 Sponsored by ag-calculators.com
+        <agc-calving-date-results socket="example">
+          <div slot="empty">????</div>
+        </agc-calving-date-results>
     </div>
   </agc-calving-date>
-  <agc-calving-date-progress socket="example"></agc-calving-date-progress>
+  <!--  -->
 </body>
 </html>

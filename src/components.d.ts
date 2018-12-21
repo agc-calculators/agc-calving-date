@@ -31,11 +31,20 @@ export namespace Components {
     'socket'?: string;
   }
 
+  interface AgcCalvingDateResults {
+    'socket': string;
+  }
+  interface AgcCalvingDateResultsAttributes extends StencilHTMLAttributes {
+    'socket'?: string;
+  }
+
   interface AgcCalvingDate {
+    'mode': 'full' | 'step';
     'shadow': boolean;
     'socket': string;
   }
   interface AgcCalvingDateAttributes extends StencilHTMLAttributes {
+    'mode'?: 'full' | 'step';
     'onAgcCalculated'?: (event: CustomEvent) => void;
     'onAgcStepChanged'?: (event: CustomEvent) => void;
     'shadow'?: boolean;
@@ -47,12 +56,14 @@ declare global {
   interface StencilElementInterfaces {
     'AgcCalvingDateProgress': Components.AgcCalvingDateProgress;
     'AgcCalvingDateAction': Components.AgcCalvingDateAction;
+    'AgcCalvingDateResults': Components.AgcCalvingDateResults;
     'AgcCalvingDate': Components.AgcCalvingDate;
   }
 
   interface StencilIntrinsicElements {
     'agc-calving-date-progress': Components.AgcCalvingDateProgressAttributes;
     'agc-calving-date-action': Components.AgcCalvingDateActionAttributes;
+    'agc-calving-date-results': Components.AgcCalvingDateResultsAttributes;
     'agc-calving-date': Components.AgcCalvingDateAttributes;
   }
 
@@ -69,6 +80,12 @@ declare global {
     new (): HTMLAgcCalvingDateActionElement;
   };
 
+  interface HTMLAgcCalvingDateResultsElement extends Components.AgcCalvingDateResults, HTMLStencilElement {}
+  var HTMLAgcCalvingDateResultsElement: {
+    prototype: HTMLAgcCalvingDateResultsElement;
+    new (): HTMLAgcCalvingDateResultsElement;
+  };
+
   interface HTMLAgcCalvingDateElement extends Components.AgcCalvingDate, HTMLStencilElement {}
   var HTMLAgcCalvingDateElement: {
     prototype: HTMLAgcCalvingDateElement;
@@ -78,12 +95,14 @@ declare global {
   interface HTMLElementTagNameMap {
     'agc-calving-date-progress': HTMLAgcCalvingDateProgressElement
     'agc-calving-date-action': HTMLAgcCalvingDateActionElement
+    'agc-calving-date-results': HTMLAgcCalvingDateResultsElement
     'agc-calving-date': HTMLAgcCalvingDateElement
   }
 
   interface ElementTagNameMap {
     'agc-calving-date-progress': HTMLAgcCalvingDateProgressElement;
     'agc-calving-date-action': HTMLAgcCalvingDateActionElement;
+    'agc-calving-date-results': HTMLAgcCalvingDateResultsElement;
     'agc-calving-date': HTMLAgcCalvingDateElement;
   }
 

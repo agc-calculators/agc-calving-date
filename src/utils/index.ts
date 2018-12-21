@@ -1,3 +1,5 @@
+const oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
+
 export const addDays = (dt, days) => {
 
   if (typeof dt === 'string') {
@@ -23,4 +25,10 @@ export const formatDate = (date, sep = "/") => {
   var y = newDate.getFullYear()
 
   return `${mm}${sep}${dd}${sep}${y}`
+}
+
+export const daysBetween = (d1, d2) => {
+  var firstDate = new Date(d1);
+  var secondDate = new Date(d2);
+  return Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));
 }

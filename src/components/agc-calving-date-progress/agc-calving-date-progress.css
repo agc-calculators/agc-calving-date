@@ -8,7 +8,7 @@ agc-calving-date-progress .wizard__progress {
 }
 
 agc-calving-date-progress .wizard__progress.complete {
-    display: var(--agc-step-progress-complete-display, block);
+    display: var(--agc-step-progress-complete-display, none);
 }
 
 agc-calving-date-progress .step {

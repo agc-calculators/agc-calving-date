@@ -25,16 +25,19 @@ export class AgcCalvingDateProgress {
     }
 
     agcStepChangedHandler(event: CustomEvent) {
-        console.log('step changed', event)
         if (event!.detail['socket'] !== this.socket) { return; }
         this.currentStep = parseInt(event.detail['step'])
+        this.progress.classList.remove('complete')
     }
 
     agcCalculatedHandler(event: CustomEvent) {
-        console.log('calculated', event)
         if (event!.detail['socket'] !== this.socket) { return; }
-        console.log('Received the custom calculated event: ', event.detail);
         this.currentStep = 2
         this.progress.classList.add('complete')
+    }
+
+    componentDidUnload() {
+        window.document.removeEventListener('agcCalculated', this.agcCalculatedHandler);
+        window.document.removeEventListener('agcStepChanged', this.agcStepChangedHandler);
     }
 }
