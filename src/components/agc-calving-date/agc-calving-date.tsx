@@ -9,6 +9,7 @@ import { addDays, formatDate, inputDate, daysBetween } from '../../utils'
 export class AgcCalvingDate {
 
     @Prop() socket: string = ""
+    @Prop() tract: string = ""
     @Prop() shadow: boolean = false
     @Prop() mode: 'full' | 'step' = 'step'
     @State() currentStep = 0
@@ -78,7 +79,7 @@ export class AgcCalvingDate {
         }
 
         if (this.socket) {
-            this.agcStepChanged.emit({socket: this.socket, step: this.currentStep})
+            this.agcStepChanged.emit({socket: this.socket, tract: this.tract, step: this.currentStep})
         }
     }
 
@@ -175,6 +176,8 @@ export class AgcCalvingDate {
         let current = [firstPartition, secondPartition, thirdPartition].filter(c => c.isCurrent);
 
         let results = {
+            socket: this.socket,
+            tract: this.tract,
             breedingDate: formatDate(breedingDate, "/"),
             gestationPeriod: gestationPeriod,
             calvingDate: formatDate(calvingDate, "/"),
@@ -210,7 +213,7 @@ export class AgcCalvingDate {
         }
 
         if (this.socket) {
-            this.agcCalculated.emit({socket: this.socket, results: {...results}})
+            this.agcCalculated.emit({socket: this.socket, tract: this.tract, results: {...results}})
         }
 
         this.results = {...results}
