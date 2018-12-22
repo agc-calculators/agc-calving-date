@@ -18,13 +18,14 @@
 <body>    
   <h2 style="text-align: center">Calving Date Calculator</h2>
   <agc-calving-date-progress socket="example"></agc-calving-date-progress>
-  <agc-calving-date socket="example" mode="step">
+  <agc-calving-date socket="example" mode="full">
     <div slot="results">
         <agc-calving-date-results socket="example">
-          <div slot="empty">????</div>
+          <div slot="empty"><agc-calving-date-results-placeholder></agc-calving-date-results-placeholder></div>
         </agc-calving-date-results>
     </div>
   </agc-calving-date>
+  <agc-calving-date-actions socket="example"></agc-calving-date-actions>
   <!--  -->
 </body>
 </html>

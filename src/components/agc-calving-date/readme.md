@@ -7,10 +7,12 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type      |
-| -------- | --------- | ----------- | --------- |
-| `shadow` | `shadow`  |             | `boolean` |
-| `socket` | `socket`  |             | `string`  |
+| Property | Attribute | Description | Type               |
+| -------- | --------- | ----------- | ------------------ |
+| `mode`   | `mode`    |             | `"full" \| "step"` |
+| `shadow` | `shadow`  |             | `boolean`          |
+| `socket` | `socket`  |             | `string`           |
+| `tract`  | `tract`   |             | `string`           |
 
 
 ## Events

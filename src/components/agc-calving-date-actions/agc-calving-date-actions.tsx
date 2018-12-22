@@ -8,6 +8,7 @@ import { Component, Prop, State } from '@stencil/core';
 export class AgcCalvingDateActions {
 
     @Prop() socket: string
+    @Prop() tract: string
     @State() results: any
 
     render() {
@@ -17,6 +18,7 @@ export class AgcCalvingDateActions {
                     action-type="calendar" 
                     action-text="Add to Calendar"
                     action-slug="agc-calving-date"
+                    action-tract={this.tract}
                     action-text-i18n="actions.add-to-calendar"
                     action-payload={JSON.stringify(this.results || {})}>
                 </agc-action>}

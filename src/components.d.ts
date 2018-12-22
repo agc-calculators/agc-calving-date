@@ -12,6 +12,15 @@ import '@stencil/core';
 
 export namespace Components {
 
+  interface AgcCalvingDateActions {
+    'socket': string;
+    'tract': string;
+  }
+  interface AgcCalvingDateActionsAttributes extends StencilHTMLAttributes {
+    'socket'?: string;
+    'tract'?: string;
+  }
+
   interface AgcCalvingDateProgress {
     'socket': string;
   }
@@ -31,6 +40,9 @@ export namespace Components {
     'socket'?: string;
   }
 
+  interface AgcCalvingDateResultsPlaceholder {}
+  interface AgcCalvingDateResultsPlaceholderAttributes extends StencilHTMLAttributes {}
+
   interface AgcCalvingDateResults {
     'socket': string;
   }
@@ -42,6 +54,7 @@ export namespace Components {
     'mode': 'full' | 'step';
     'shadow': boolean;
     'socket': string;
+    'tract': string;
   }
   interface AgcCalvingDateAttributes extends StencilHTMLAttributes {
     'mode'?: 'full' | 'step';
@@ -49,24 +62,35 @@ export namespace Components {
     'onAgcStepChanged'?: (event: CustomEvent) => void;
     'shadow'?: boolean;
     'socket'?: string;
+    'tract'?: string;
   }
 }
 
 declare global {
   interface StencilElementInterfaces {
+    'AgcCalvingDateActions': Components.AgcCalvingDateActions;
     'AgcCalvingDateProgress': Components.AgcCalvingDateProgress;
     'AgcCalvingDateAction': Components.AgcCalvingDateAction;
+    'AgcCalvingDateResultsPlaceholder': Components.AgcCalvingDateResultsPlaceholder;
     'AgcCalvingDateResults': Components.AgcCalvingDateResults;
     'AgcCalvingDate': Components.AgcCalvingDate;
   }
 
   interface StencilIntrinsicElements {
+    'agc-calving-date-actions': Components.AgcCalvingDateActionsAttributes;
     'agc-calving-date-progress': Components.AgcCalvingDateProgressAttributes;
     'agc-calving-date-action': Components.AgcCalvingDateActionAttributes;
+    'agc-calving-date-results-placeholder': Components.AgcCalvingDateResultsPlaceholderAttributes;
     'agc-calving-date-results': Components.AgcCalvingDateResultsAttributes;
     'agc-calving-date': Components.AgcCalvingDateAttributes;
   }
 
+
+  interface HTMLAgcCalvingDateActionsElement extends Components.AgcCalvingDateActions, HTMLStencilElement {}
+  var HTMLAgcCalvingDateActionsElement: {
+    prototype: HTMLAgcCalvingDateActionsElement;
+    new (): HTMLAgcCalvingDateActionsElement;
+  };
 
   interface HTMLAgcCalvingDateProgressElement extends Components.AgcCalvingDateProgress, HTMLStencilElement {}
   var HTMLAgcCalvingDateProgressElement: {
@@ -78,6 +102,12 @@ declare global {
   var HTMLAgcCalvingDateActionElement: {
     prototype: HTMLAgcCalvingDateActionElement;
     new (): HTMLAgcCalvingDateActionElement;
+  };
+
+  interface HTMLAgcCalvingDateResultsPlaceholderElement extends Components.AgcCalvingDateResultsPlaceholder, HTMLStencilElement {}
+  var HTMLAgcCalvingDateResultsPlaceholderElement: {
+    prototype: HTMLAgcCalvingDateResultsPlaceholderElement;
+    new (): HTMLAgcCalvingDateResultsPlaceholderElement;
   };
 
   interface HTMLAgcCalvingDateResultsElement extends Components.AgcCalvingDateResults, HTMLStencilElement {}
@@ -93,15 +123,19 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
+    'agc-calving-date-actions': HTMLAgcCalvingDateActionsElement
     'agc-calving-date-progress': HTMLAgcCalvingDateProgressElement
     'agc-calving-date-action': HTMLAgcCalvingDateActionElement
+    'agc-calving-date-results-placeholder': HTMLAgcCalvingDateResultsPlaceholderElement
     'agc-calving-date-results': HTMLAgcCalvingDateResultsElement
     'agc-calving-date': HTMLAgcCalvingDateElement
   }
 
   interface ElementTagNameMap {
+    'agc-calving-date-actions': HTMLAgcCalvingDateActionsElement;
     'agc-calving-date-progress': HTMLAgcCalvingDateProgressElement;
     'agc-calving-date-action': HTMLAgcCalvingDateActionElement;
+    'agc-calving-date-results-placeholder': HTMLAgcCalvingDateResultsPlaceholderElement;
     'agc-calving-date-results': HTMLAgcCalvingDateResultsElement;
     'agc-calving-date': HTMLAgcCalvingDateElement;
   }
