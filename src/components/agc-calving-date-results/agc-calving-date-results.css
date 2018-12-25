@@ -75,3 +75,18 @@ agc-calving-date-results ul.agc-results sub {
     font-size: var(--agc-results-sub-font-size, 18px);
     margin-left: 5px;
 }
+agc-calving-date-results .mark {
+    font-size: var(--agc-results-value-font-size, 42px);
+    font-weight: var(--agc-results-value-font-weight, bold);
+    line-height: var(--agc-results-value-line-height, 1);
+    height: var(--agc-step-progress-height, 15px);
+    width: var(--agc-step-progress-width, 15px);
+    margin: var(--agc-step-progress-margin, 0 2px);
+    background-color: var(--agc-step-progress-bg-color, #bbbbbb);
+    border: var(--agc-step-progress-border, none);  
+    border-radius: var(--agc-step-progress-border-radius,  50%);
+    display: var(--agc-step-progress-display, inline-block);
+    opacity: var(--agc-step-progress-opacity, 0.5);
+    position: relative;
+    top: -5px;
+}
